@@ -40,20 +40,19 @@ public class QuestionService {
     public void printScore() {
         int score = 0;
         for (int i = 0; i < questions.length; i++) {
+            System.out.println("Question no. : " + questions[i].getId() +"\t"+ questions[i].getQuestion());
+            System.out.println("Your Answer: "+selection[i] );
+            System.out.println("Correct Answer: " + questions[i].getAnswer());
+            System.out.println();
             Question que = questions[i];
             String answer = que.getAnswer();
             String userAnswer = selection[i];
+
             if (answer.equals(userAnswer)) {
                 score++;
             }
         }
         System.out.println("Your score is : " + score);
-        System.out.println("Correct Answer: ");
-        System.out.println("4");
-        System.out.println("8");
-        System.out.println("2");
-        System.out.println("8");
-        System.out.println("1");
 
     }
 
